@@ -1,0 +1,57 @@
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+    <div class="logo">
+      <img class="center" src="../../../assets/coreui-img.png" alt="">
+    </div>
+    <div class="side-items">
+
+      <div class="item">
+        <mat-icon class="mat-18">speedometer</mat-icon>
+        Dashboard
+      </div>
+
+      <div class="side-heading">
+        THEME
+      </div>
+      <div class="theme-item">
+        <mat-icon class="mat-18">place</mat-icon>
+        Colors
+      </div>
+      <div class="theme-item typo">
+        <mat-icon class="mat-18">pencil</mat-icon>
+        Typography
+      </div>
+
+      <div class="side-heading">
+        Components
+      </div>
+    
+
+</div>
+      <mat-accordion class="example-headers-align" multi>
+        <!-- #enddocregion multi -->
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+               Base
+              </mat-panel-title>
+           
+            </mat-expansion-panel-header>
+        
+          <div>Accordian</div>
+          <div>Breadcrumbs</div>
+          <div>Carousel</div>
+        
+          </mat-expansion-panel>
+          </mat-accordion>
+
+    
+  </mat-drawer>
+
+  <div class="example-sidenav-content">
+
+    <mat-icon aria-hidden="false" (click)="drawer.toggle()" aria-label="Example home icon">reorder</mat-icon>
+
+  </div>
+
+</mat-drawer-container>
