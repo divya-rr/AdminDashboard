@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-sidebar',
@@ -7,10 +7,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
   showFiller=false
+  @ViewChild('drawer') drawer!:SidebarComponent
+  @Input() isMenuClicked: any
+  showMenu=true
 
   constructor() { }
 
   ngOnInit(): void {
+    
+  }
+  ngOnChanges(){
+    console.log("Clicked ",this.isMenuClicked );
+    this.drawer?.toggle()
+  
+  }
+
+  toggle(){
+  this.isMenuClicked=!this.isMenuClicked
+    
   }
  
 

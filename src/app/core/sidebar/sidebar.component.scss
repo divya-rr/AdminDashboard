@@ -4,10 +4,12 @@
 
  
 }
+
+mat-drawer-container { flex: 1 1 auto; }
+
 .example-sidenav{
   background-color: rgba(60, 75, 100);
-  //width: 12%;
-  height: 100%;
+
   overflow-x:hidden;
 }
 .center {
@@ -26,7 +28,9 @@
   color: white !important;
 }
 .item{
-  padding: 18px
+ display: flex;
+ align-items: center;
+
 }
 .theme-item{
   text-align: center;
