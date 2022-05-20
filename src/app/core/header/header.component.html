@@ -1,21 +1,71 @@
-<div class="card">
+<div class="card" >
     <div class="card-body">
+     
       
-
-            <mat-icon (click)="toggleMenu()" aria-hidden="false"aria-label="Example home icon">menu</mat-icon>
+<div>
+      <mat-icon (click)="toggleMenu()" aria-hidden="false"aria-label="Example home icon">menu</mat-icon>
         
      
      <span class="px-3">Dashboard</span>
      <span class="px-3">Users</span>
      <span class="px-3">Settings</span>
+     </div>
     
      <span style="float:right;" >
      <mat-icon class="px-3">notifications_none</mat-icon> 
      <mat-icon class="px-3">apps</mat-icon> 
      <mat-icon class="px-3">local_post_office</mat-icon>
-     <img src="../../../assets/profile.jpg" width="50px" height="50px" class="profile-pic" alt=""> 
+     
+     <img src="../../../assets/profile.jpg" mat-button [matMenuTriggerFor]="menu" width="50px" height="50px" class="profile-pic" alt="">
+    
+     <mat-menu #menu="matMenu">
+       <div style="background-color: grey;padding: 10px;">Account</div>
+      <button mat-menu-item style="display: flex;justify-content:space-between;align-items: center;">
+        <mat-icon class="mat-18">apps</mat-icon><span>Updates</span><span class="badge mx-3" style="background-color: blue;">42</span> </button>
+
+        <button mat-menu-item style="display: flex;justify-content:space-between;align-items: center;">
+          <mat-icon class="mat-18">apps</mat-icon><span>Updates</span><span class="badge mx-3" style="background-color: blue;">42</span> </button>
+
+          <button mat-menu-item style="display: flex;justify-content:space-between;align-items: center;">
+            <mat-icon class="mat-18">apps</mat-icon><span>Updates</span><span class="badge mx-3" style="background-color: blue;">42</span> </button>
+
+            <button mat-menu-item style="display: flex;justify-content:space-between;align-items: center;">
+              <mat-icon class="mat-18">apps</mat-icon><span>Updates</span><span class="badge mx-3" style="background-color: blue;">42</span> </button>
+
+
+              <div style="background-color: grey;padding: 10px;">Account</div>
+              <button mat-menu-item style="display: flex;justify-content:space-between;align-items: center;">
+                <mat-icon class="mat-18">apps</mat-icon><span>Updates</span><span class="badge mx-3">42</span></button>
+        
+                <button mat-menu-item style="display: flex;justify-content:space-between;align-items: center;">
+                  <mat-icon class="mat-18">apps</mat-icon><span>Updates</span><span class="badge mx-3">42</span></button>
+        
+                  <button mat-menu-item style="display: flex;justify-content:space-between;align-items: center;">
+                    <mat-icon class="mat-18">apps</mat-icon><span>Updates</span><span class="badge mx-3" style="background-color: blue;">42</span> </button>
+        
+                    <button mat-menu-item style="display: flex;justify-content:space-between;align-items: center;">
+                      <mat-icon class="mat-18">apps</mat-icon><span>Updates</span><span class="badge mx-3" style="background-color: blue;">42</span> </button>
+                      <hr>
+                      <button mat-menu-item style="display: flex;justify-content:space-between;align-items: center;">
+                        <mat-icon class="mat-18">apps</mat-icon><span>Updates</span><span class="badge mx-3">42</span></button>
+                
+                        <button routerLink="/login" mat-menu-item style="display: flex;justify-content:space-between;align-items: center;">
+                          <mat-icon class="mat-18">apps</mat-icon>Logout<span class="badge mx-3">42</span></button>
+                
+
+
+
+            
+     
+        
+    </mat-menu>
      </span>
+   
      <hr>
+   
+     
+
+    
      <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a >Home</a></li>
@@ -26,3 +76,4 @@
         
     </div>
   </div>
+  

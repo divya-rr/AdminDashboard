@@ -1,0 +1,84 @@
+<div class="container">
+
+    <div class="card card-body bg-white border-light shadow-sm">
+        <form [formGroup]="userForm">
+            <h3 class="p-3 heading">Registeration Form</h3>
+
+            <h6 class="p-3"><strong> * denotes that the field is required.</strong></h6>
+            <div class="form-group row p-3">
+                <div class="form-group col-md-6">
+                    <label for="first-name" class="required"><b>First Name *</b></label>
+
+                    <input id="first-name" type="text" class="form-control" placeholder="Enter your first name"
+                        formControlName="firstName" />
+                    <div *ngIf="firstName?.invalid && firstName?.touched">
+                        <small class="text-danger " *ngIf="firstName?.errors?.['required']">First Name is
+                            required</small>
+
+
+                    </div>
+                </div>
+
+
+                <div class="form-group col-md-6">
+                    <label for="last-name" class="required"><b>Last Name </b></label>
+
+                    <input id="last-name" type="text" class="form-control" placeholder="Also your last name"
+                        formControlName="lastName" />
+
+
+
+
+                </div>
+            </div>
+
+
+            <div class="form-group row p-3">
+                <div class="form-group col-md-6">
+                    <label for="email" class="required"><b>Email *</b></label>
+
+                    <input id="email" type="email" class="form-control" placeholder="name@company.com"
+                        formControlName="email" />
+                    <div *ngIf="email?.invalid && email?.touched">
+                        <small class="text-danger " *ngIf="email?.errors?.['required']">Email is required</small>
+                        <small class="text-danger" *ngIf="email?.errors?.['email']">Email is invalid</small>
+
+                    </div>
+
+
+
+                </div>
+
+
+                <div class="form-group col-md-6">
+                    <label for="password" class="required"><b>Password *</b></label>
+                    <div class="image">
+
+
+                        <input [type]="show?'text':'password'" class="form-control" formControlName="password" />
+
+                        <img src="../assets/eye-icon.svg" (click)="showPassword()" alt="">
+                    </div>
+                    <div *ngIf="password?.invalid && password?.touched">
+                        <small class="text-danger " *ngIf="password?.errors?.['required']">Password is required</small>
+                        <small class="text-danger" *ngIf="password?.errors?.['pattern']">Password is invalid</small>
+
+                    </div>
+
+
+
+                </div>
+
+
+                <button class="btn btn-primary m-3 save-btn" [disabled]="userForm.invalid"
+                    (click)="submit(userForm)">Submit</button>
+                <div class="button-row">
+                    <a routerLink="../login">
+                        <p>Already have an account? <strong><u>Login</u></strong> </p>
+                    </a>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>

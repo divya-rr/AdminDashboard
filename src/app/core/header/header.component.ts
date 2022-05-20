@@ -10,6 +10,7 @@ import { SidebarComponent } from '../sidebar/sidebar.component';
 export class HeaderComponent implements OnInit {
   showMenu=false
   @Output() menuState = new EventEmitter()
+  
  
   constructor() { }
 
@@ -18,6 +19,11 @@ export class HeaderComponent implements OnInit {
   toggleMenu(){
     this.showMenu=!this.showMenu
     this.menuState.emit(this.showMenu)
+  }
+  showItems=false
+  imgClicked(){
+this.showItems=!this.showItems
+
   }
 
   

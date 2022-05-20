@@ -8,8 +8,8 @@ import { SidebarComponent } from '../sidebar/sidebar.component';
 })
 export class DashboardComponent implements OnInit {
 
-  @ViewChild('drawer') drawer!:SidebarComponent
-  constructor(private cdr: ChangeDetectorRef) { }
+
+  constructor() { }
 
   ngOnInit(): void {
   }
@@ -18,11 +18,9 @@ export class DashboardComponent implements OnInit {
   {
     this.isMenuClicked=event
     console.log(this.isMenuClicked)
+  
 
   }
-  // ngAfterViewInit(){
-  //   this.drawer.toggle()
-  //   this.cdr.detectChanges()
-  // }
+
 
 }

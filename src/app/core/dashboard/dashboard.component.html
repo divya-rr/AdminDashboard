@@ -1,16 +1,21 @@
-<div class="row">
-    <div class="col-md-2">
-        <app-sidebar [isMenuClicked]="isMenuClicked"></app-sidebar>
-    </div>
-    <div class="col-md-10">
-        <div class="position">
-        <app-header (menuState)="menuClicked($event)"></app-header>
+
+<app-sidebar  [isMenuClicked]="isMenuClicked"></app-sidebar>
+
+    
+    <div class="main"  [ngStyle]="isMenuClicked ? {'width': '100%', 'left': '0px'} : {'width':'88%','left':'230px'}">
+    
+        <div class="header">
+            <app-header (menuState)="menuClicked($event)"></app-header>
         </div>
-        <div class="position">
+        <div class="container">
         
-        <app-main ></app-main>
+        <div class="position">
+            <app-main></app-main>
         </div>
         <app-chart></app-chart>
         <app-media></app-media>
-    </div>
-</div>
+        </div>
+        </div>
+    
+ 
+

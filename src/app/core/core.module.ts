@@ -5,8 +5,8 @@ import { AppMaterialModule } from '../app-material/app-material.module';
 import { SidebarComponent } from './sidebar/sidebar.component';
 
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { MainComponent } from '../main/main.component';
-import { ChartComponent } from '../chart/chart.component';
+import { MainComponent } from './main/main.component';
+import { ChartComponent } from './chart/chart.component';
 import { MediaComponent } from './media/media.component';
 import { HeaderComponent } from './header/header.component';
 

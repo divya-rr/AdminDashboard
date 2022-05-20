@@ -8,7 +8,7 @@ import { Component, Input, OnInit, ViewChild } from '@angular/core';
 export class SidebarComponent implements OnInit {
   showFiller=false
   @ViewChild('drawer') drawer!:SidebarComponent
-  @Input() isMenuClicked: any
+  @Input() isMenuClicked!: boolean
   showMenu=true
 
   constructor() { }
