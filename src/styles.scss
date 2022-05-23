@@ -1,20 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
  @import '~@angular/material/prebuilt-themes/indigo-pink.css';
  @import '~ngx-toastr/toastr';
-// body {
-//     font-family: Roboto, "Helvetica Neue", sans-serif;
-//     margin: 0;
-  
-//   }
-body{
- // overflow: hidden;
-}
-  
-  html, body {
-   
-     //background-color: rgba(235, 237, 239);
-  }
+
   .mat-drawer-inner-container::-webkit-scrollbar {
+   
    background: rgba(35, 42, 54); 
    border-radius: 10px;
    width: 5px;
