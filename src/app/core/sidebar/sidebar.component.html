@@ -1,4 +1,4 @@
-<mat-drawer-container class="example-container" style="position:fixed;right: 0px;left: 0px;bottom: 0px;top: 0px;">
+<mat-drawer-container class="example-container">
   <mat-drawer #drawer class="example-sidenav" mode="side" opened>
     <div class="logo">
       <img class="center" src="../../../assets/coreui-img.png" alt="">
@@ -28,317 +28,38 @@
       </div>
     
 
-</div>
-      <mat-accordion class="example-headers-align" multi>
+
+      <mat-accordion *ngFor="let accordian of navItems " class="example-headers-align" multi>
      
-          <mat-expansion-panel>
+          <mat-expansion-panel #pagecontainer>
             <mat-expansion-panel-header>
               <mat-panel-title>
-               Base
+                <mat-icon class="mat-18 icon">{{accordian.icon}}</mat-icon>{{accordian.name}}
               </mat-panel-title>
            
             </mat-expansion-panel-header>
+          
         
-          <div>Accordian</div>
-          <div>Breadcrumbs</div>
-          <div>Carousel</div>
-        
+          <div class="subTitle" *ngFor="let items of accordian.children"> <mat-icon class="mat-18">{{items.icon}}</mat-icon>{{items.name}}</div>
+          
           </mat-expansion-panel>
           </mat-accordion>
+          <div class="item" routerLink="/dashboard">
+            <mat-icon class="mx-3">widgets</mat-icon>
+         Widgets <button class="mx-3" mat-raised-button color="primary">New</button>
+          </div>
+          <div class="side-heading">
+            Extras
+          </div>
 
-
-
-          <mat-accordion class="example-headers-align" multi>
-     
-            <mat-expansion-panel>
-              <mat-expansion-panel-header>
-                <mat-panel-title>
-                 Base
-                </mat-panel-title>
-             
-              </mat-expansion-panel-header>
-          
-            <div>Accordian</div>
-            <div>Breadcrumbs</div>
-            <div>Carousel</div>
-          
-            </mat-expansion-panel>
-            </mat-accordion>
-
-            
-
-
-            <mat-accordion class="example-headers-align" multi>
-     
-              <mat-expansion-panel>
-                <mat-expansion-panel-header>
-                  <mat-panel-title>
-                   Base
-                  </mat-panel-title>
-               
-                </mat-expansion-panel-header>
-            
-              <div>Accordian</div>
-              <div>Breadcrumbs</div>
-              <div>Carousel</div>
-            
-              </mat-expansion-panel>
-              </mat-accordion>
-
-              
-              <mat-accordion class="example-headers-align" multi>
-     
-                <mat-expansion-panel>
-                  <mat-expansion-panel-header>
-                    <mat-panel-title>
-                     Base
-                    </mat-panel-title>
-                 
-                  </mat-expansion-panel-header>
-              
-                <div>Accordian</div>
-                <div>Breadcrumbs</div>
-                <div>Carousel</div>
-              
-                </mat-expansion-panel>
-                </mat-accordion>
-
-                
-
-
-                <mat-accordion class="example-headers-align" multi>
-     
-                  <mat-expansion-panel>
-                    <mat-expansion-panel-header>
-                      <mat-panel-title>
-                       Base
-                      </mat-panel-title>
-                   
-                    </mat-expansion-panel-header>
-                
-                  <div>Accordian</div>
-                  <div>Breadcrumbs</div>
-                  <div>Carousel</div>
-                
-                  </mat-expansion-panel>
-                  </mat-accordion>
-
-                  
-
-
-                  <mat-accordion class="example-headers-align" multi>
-     
-                    <mat-expansion-panel>
-                      <mat-expansion-panel-header>
-                        <mat-panel-title>
-                         Base
-                        </mat-panel-title>
-                     
-                      </mat-expansion-panel-header>
-                  
-                    <div>Accordian</div>
-                    <div>Breadcrumbs</div>
-                    <div>Carousel</div>
-                  
-                    </mat-expansion-panel>
-                    </mat-accordion>
-
-                    
-
-                    <mat-accordion class="example-headers-align" multi>
-     
-                      <mat-expansion-panel>
-                        <mat-expansion-panel-header>
-                          <mat-panel-title>
-                           Base
-                          </mat-panel-title>
-                       
-                        </mat-expansion-panel-header>
-                    
-                      <div>Accordian</div>
-                      <div>Breadcrumbs</div>
-                      <div>Carousel</div>
-                    
-                      </mat-expansion-panel>
-                      </mat-accordion>
-
-
-                      <mat-accordion class="example-headers-align" multi>
-     
-                        <mat-expansion-panel>
-                          <mat-expansion-panel-header>
-                            <mat-panel-title>
-                             Base
-                            </mat-panel-title>
-                         
-                          </mat-expansion-panel-header>
-                      
-                        <div>Accordian</div>
-                        <div>Breadcrumbs</div>
-                        <div>Carousel</div>
-                      
-                        </mat-expansion-panel>
-                        </mat-accordion>
-
-
-
-                        <mat-accordion class="example-headers-align" multi>
-     
-                          <mat-expansion-panel>
-                            <mat-expansion-panel-header>
-                              <mat-panel-title>
-                               Base
-                              </mat-panel-title>
-                           
-                            </mat-expansion-panel-header>
-                        
-                          <div>Accordian</div>
-                          <div>Breadcrumbs</div>
-                          <div>Carousel</div>
-                        
-                          </mat-expansion-panel>
-                          </mat-accordion>
-
-
-
-
-                          <mat-accordion class="example-headers-align" multi>
-     
-                            <mat-expansion-panel>
-                              <mat-expansion-panel-header>
-                                <mat-panel-title>
-                                 Base
-                                </mat-panel-title>
-                             
-                              </mat-expansion-panel-header>
-                          
-                            <div>Accordian</div>
-                            <div>Breadcrumbs</div>
-                            <div>Carousel</div>
-                          
-                            </mat-expansion-panel>
-                            </mat-accordion>
-
-
-
-                            <mat-accordion class="example-headers-align" multi>
-     
-                              <mat-expansion-panel>
-                                <mat-expansion-panel-header>
-                                  <mat-panel-title>
-                                   Base
-                                  </mat-panel-title>
-                               
-                                </mat-expansion-panel-header>
-                            
-                              <div>Accordian</div>
-                              <div>Breadcrumbs</div>
-                              <div>Carousel</div>
-                            
-                              </mat-expansion-panel>
-                              </mat-accordion>
-
-
-
-                              <mat-accordion class="example-headers-align" multi>
-     
-                                <mat-expansion-panel>
-                                  <mat-expansion-panel-header>
-                                    <mat-panel-title>
-                                     Base
-                                    </mat-panel-title>
-                                 
-                                  </mat-expansion-panel-header>
-                              
-                                <div>Accordian</div>
-                                <div>Breadcrumbs</div>
-                                <div>Carousel</div>
-                              
-                                </mat-expansion-panel>
-                                </mat-accordion>
-
-
-
-                                <mat-accordion class="example-headers-align" multi>
-     
-                                  <mat-expansion-panel>
-                                    <mat-expansion-panel-header>
-                                      <mat-panel-title>
-                                       Base
-                                      </mat-panel-title>
-                                   
-                                    </mat-expansion-panel-header>
-                                
-                                  <div>Accordian</div>
-                                  <div>Breadcrumbs</div>
-                                  <div>Carousel</div>
-                                
-                                  </mat-expansion-panel>
-                                  </mat-accordion>
-
-
-
-                                  <mat-accordion class="example-headers-align" multi>
-     
-                                    <mat-expansion-panel>
-                                      <mat-expansion-panel-header>
-                                        <mat-panel-title>
-                                         Base
-                                        </mat-panel-title>
-                                     
-                                      </mat-expansion-panel-header>
-                                  
-                                    <div>Accordian</div>
-                                    <div>Breadcrumbs</div>
-                                    <div>Carousel</div>
-                                  
-                                    </mat-expansion-panel>
-                                    </mat-accordion>
-
-
-                                    <mat-accordion class="example-headers-align" multi>
-     
-                                      <mat-expansion-panel>
-                                        <mat-expansion-panel-header>
-                                          <mat-panel-title>
-                                           Base
-                                          </mat-panel-title>
-                                       
-                                        </mat-expansion-panel-header>
-                                    
-                                      <div>Accordian</div>
-                                      <div>Breadcrumbs</div>
-                                      <div>Carousel</div>
-                                    
-                                      </mat-expansion-panel>
-                                      </mat-accordion>
-
-
-
-                                      <mat-accordion class="example-headers-align" multi>
-     
-                                        <mat-expansion-panel>
-                                          <mat-expansion-panel-header>
-                                            <mat-panel-title>
-                                             Base
-                                            </mat-panel-title>
-                                         
-                                          </mat-expansion-panel-header>
-                                      
-                                        <div>Accordian</div>
-                                        <div>Breadcrumbs</div>
-                                        <div>Carousel</div>
-                                      
-                                        </mat-expansion-panel>
-                                        </mat-accordion>
-            
-
-    
-  </mat-drawer>
-
- 
-
-</mat-drawer-container>
-
-
-<!-- style="position: absolute;right: 0px;left: 0px;bottom: 0px;top: 0px;" -->
+          <div class="theme-item">
+            <mat-icon class="mat-18">insert_drive_file</mat-icon>
+            Docs
+          </div>
+          <div class="theme-item">
+            <mat-icon class="mat-18">layers</mat-icon>
+            Try Core UIPRO
+          </div>
+          </div>
+          </mat-drawer>
+          </mat-drawer-container>

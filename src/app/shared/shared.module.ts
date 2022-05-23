@@ -20,4 +20,4 @@ import { MatInputModule } from '@angular/material/input';
     MatCardModule,MatSidenavModule,MatExpansionModule,MatFormFieldModule,MatInputModule
   ]
 })
-export class AppMaterialModule {}
+export class SharedModule {}

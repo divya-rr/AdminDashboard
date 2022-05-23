@@ -1,19 +1,18 @@
+<app-sidebar [navItems]="navItems" [isMenuClicked]="isMenuClicked"></app-sidebar>
 
-<app-sidebar  [isMenuClicked]="isMenuClicked"></app-sidebar>
-
+<div class="main" [ngStyle]="isMenuClicked ? { 'left': '0px','right':'0'} : {'left':'240px','right':'0'}" >
+        {{isMenuClicked}}
     
-    <div class="main"  [ngStyle]="isMenuClicked ? {'width': '100%', 'left': '0px'} : {'width':'88%','left':'230px'}">
-    
-        <div class="header">
-            <app-header (menuState)="menuClicked($event)"></app-header>
+        <div class="header" [ngStyle]="isMenuClicked ? { 'left': '0px','right':'0'} : {'left':'240px','right':'0'}">
+            <app-header (menuState)="menuClicked($event)" [menuItem1]="menuItem1" [menuItem2]="menuItem2"></app-header>
         </div>
         <div class="container">
         
         <div class="position">
-            <app-main></app-main>
+            <app-main [mainCardItems]="mainCardItems"></app-main>
         </div>
         <app-chart></app-chart>
-        <app-media></app-media>
+        <app-media [mediaDetails]="mediaDetails"></app-media>
         </div>
         </div>
     

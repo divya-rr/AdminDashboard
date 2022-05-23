@@ -1,4 +1,5 @@
-import { Component, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { SidebarComponent } from '../sidebar/sidebar.component';
 
@@ -9,10 +10,12 @@ import { SidebarComponent } from '../sidebar/sidebar.component';
 })
 export class HeaderComponent implements OnInit {
   showMenu=false
+  @Input() menuItem1:any
+  @Input() menuItem2:any
   @Output() menuState = new EventEmitter()
   
  
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
   }
@@ -25,6 +28,11 @@ export class HeaderComponent implements OnInit {
 this.showItems=!this.showItems
 
   }
+  logout(){
+    this.router.navigateByUrl('/login')
+   localStorage.removeItem('loggedInUser')
+  }
+
 
   
 

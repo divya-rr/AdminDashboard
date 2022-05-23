@@ -19,38 +19,21 @@
      <img src="../../../assets/profile.jpg" mat-button [matMenuTriggerFor]="menu" width="50px" height="50px" class="profile-pic" alt="">
     
      <mat-menu #menu="matMenu">
-       <div style="background-color: grey;padding: 10px;">Account</div>
-      <button mat-menu-item style="display: flex;justify-content:space-between;align-items: center;">
-        <mat-icon class="mat-18">apps</mat-icon><span>Updates</span><span class="badge mx-3" style="background-color: blue;">42</span> </button>
-
-        <button mat-menu-item style="display: flex;justify-content:space-between;align-items: center;">
-          <mat-icon class="mat-18">apps</mat-icon><span>Updates</span><span class="badge mx-3" style="background-color: blue;">42</span> </button>
-
-          <button mat-menu-item style="display: flex;justify-content:space-between;align-items: center;">
-            <mat-icon class="mat-18">apps</mat-icon><span>Updates</span><span class="badge mx-3" style="background-color: blue;">42</span> </button>
-
-            <button mat-menu-item style="display: flex;justify-content:space-between;align-items: center;">
-              <mat-icon class="mat-18">apps</mat-icon><span>Updates</span><span class="badge mx-3" style="background-color: blue;">42</span> </button>
+       <div class="header-menu">Account</div>
+      <button *ngFor="let item of menuItem1"  mat-menu-item class="items">
+        <mat-icon class="mat-18">{{item.icon}}</mat-icon><span>{{item.value}}</span><span class="badge mx-3" [ngStyle]="{'background-color':item.color}">42</span> </button>
+        <div class="header-menu">Settings</div>
+        <button *ngFor="let item of menuItem2"  mat-menu-item class="items">
+          <mat-icon class="mat-18">{{item.icon}}</mat-icon><span>{{item.value}}</span><span class="badge mx-3" [ngStyle]="{'background-color':item.color}">42</span> </button>
 
 
-              <div style="background-color: grey;padding: 10px;">Account</div>
-              <button mat-menu-item style="display: flex;justify-content:space-between;align-items: center;">
-                <mat-icon class="mat-18">apps</mat-icon><span>Updates</span><span class="badge mx-3">42</span></button>
-        
-                <button mat-menu-item style="display: flex;justify-content:space-between;align-items: center;">
-                  <mat-icon class="mat-18">apps</mat-icon><span>Updates</span><span class="badge mx-3">42</span></button>
-        
-                  <button mat-menu-item style="display: flex;justify-content:space-between;align-items: center;">
-                    <mat-icon class="mat-18">apps</mat-icon><span>Updates</span><span class="badge mx-3" style="background-color: blue;">42</span> </button>
-        
-                    <button mat-menu-item style="display: flex;justify-content:space-between;align-items: center;">
-                      <mat-icon class="mat-18">apps</mat-icon><span>Updates</span><span class="badge mx-3" style="background-color: blue;">42</span> </button>
+
                       <hr>
-                      <button mat-menu-item style="display: flex;justify-content:space-between;align-items: center;">
-                        <mat-icon class="mat-18">apps</mat-icon><span>Updates</span><span class="badge mx-3">42</span></button>
+                      <button mat-menu-item class="items">
+                        <mat-icon class="mat-18">lock</mat-icon><span>Lock Account</span><span class="badge mx-3">42</span></button>
                 
-                        <button routerLink="/login" mat-menu-item style="display: flex;justify-content:space-between;align-items: center;">
-                          <mat-icon class="mat-18">apps</mat-icon>Logout<span class="badge mx-3">42</span></button>
+                        <button (click)="logout()" mat-menu-item class="items">
+                          <mat-icon class="mat-18">assignment_return</mat-icon>Logout<span class="badge mx-3">42</span></button>
                 
 
 

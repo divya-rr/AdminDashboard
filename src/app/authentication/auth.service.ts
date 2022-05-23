@@ -10,18 +10,20 @@ export class AuthService {
   constructor() { }
   info!:User
 
-  login(emailOrdob:any,password:string){
+
+  login(email:any,password:string){
   this.info=JSON.parse(localStorage.getItem('signedInUser')||'')
-  if((emailOrdob==this.info.email && password==this.info.password) || (password==this.info.password) ){
-    localStorage.setItem('token',emailOrdob)
-    return of({emailOrdob,password})
+  if((email==this.info.email && password==this.info.password) ){
+   
+    localStorage.setItem('loggedInUser',this.info.email)
+    return of({email,password})
   }
-    return throwError('You are not allowed to login.Invalid credentials!!!!')
+    return throwError('You are not allowed to login.   Invalid credentials!!!!')
   
 
 }
       isLoggedIn() {
-        return !!localStorage.getItem('token')
+        return !!localStorage.getItem('loggedInUser')
        }
   
 

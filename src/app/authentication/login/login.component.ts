@@ -42,19 +42,26 @@ export class LoginComponent implements OnInit {
       alert('All the details are required')
     }
     else {
-      const emailOrDob = this.loginForm.value.emailOrDob
+      const email = this.loginForm.value.email
       const password = this.loginForm.value.password
 
-      this.authService.login(emailOrDob, password).subscribe(
+      this.authService.login(email, password).subscribe(
         response => {
+          this.isLoading = true;
+          setTimeout( () => {this.isLoading = false
+            this.router.navigate(['../dashboard'])}, 3000 );
+        
 
-          this.router.navigate(['../dashboard'])
+         
         }
         , errorMessage => {
-
+          this.isLoading = true;
+          setTimeout( () => {this.isLoading = false
+            this.toastr.error(this.error)}, 2000 );
+        
 
           this.error = errorMessage
-          this.toastr.error(this.error)
+          //this.toastr.error(this.error)
 
         })
     }
@@ -65,4 +72,14 @@ export class LoginComponent implements OnInit {
   get password(){
     return this.loginForm.get('password')
   }
+
+
+  isLoading = false;
+  load() : void {
+    this.isLoading = true;
+    setTimeout( () => {this.isLoading = false
+     }, 7000 );
+  
+  }
+
 }

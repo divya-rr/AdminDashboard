@@ -1,18 +1,24 @@
-.facebook{
-    background: rgba(59, 89, 152);height: 100px;
+
+.media{
+    height: 100px;
 }
 .bi.bi-facebook{
     color:white;font-size: 54px;display: flex;justify-content: center;
 }
-.twitter{
-    background: rgba(0, 172, 237);height: 100px;
-}
+
 .bi.bi-twitter{
     color:white;font-size: 54px;display: flex;justify-content: center;
 }
-.linkedin{
-    background: rgba(72, 117, 180);height: 100px;
-}
+
 .bi.bi-linkedin{
     color:white;font-size: 54px;display: flex;justify-content: center;
+}
+.contain{
+    display: flex;
+}
+.card{
+    width: 33%;
+}
+.content{
+    padding: 12px;display: flex;justify-content: space-between;
 }

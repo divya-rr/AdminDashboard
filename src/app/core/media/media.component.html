@@ -1,32 +1,13 @@
-<div style="display: flex; ;" class="my-5">
-<div class="card" style="width: 33%;">
-
-        <div class="py-3 facebook"><i class="bi bi-facebook"></i></div>
-        <div style="padding: 12px;display: flex;justify-content: space-between;">
-            <span>Followers</span>
-            <span>Tweet</span>
-
-        
-
-    </div>
-</div>
-<div class="card mx-5" style="width: 33%;">
-   
-        <div class="py-3 twitter" ><i class="bi bi-twitter"></i></div>
-        <div style="padding: 12px;display: flex;justify-content: space-between;">
-            <span>Followers</span>
-            <span>Tweet</span>
-            </div>
-        
-   
-</div>
-<div class="card" style="width: 33%;">
-
-        <div class="py-3 linkedin"><i class="bi bi-linkedin"></i></div>
-        <div style="padding: 12px;display: flex;justify-content: space-between;">
-            <span>Followers</span>
-            <span>Tweet</span>
-        
+<div class="contain my-5">
+    <div class="card" *ngFor="let detail of mediaDetails" >
     
-</div>
-</div>
+            <div class="py-3 media" [ngStyle]="{'background-color':detail.color}"><i class="{{detail.icon}}"></i></div>
+            <div class="content">
+                <span>{{detail.heading}}</span>
+                <span>{{detail.name}}</span>
+    
+            
+    
+        </div>
+    </div>
+    </div>

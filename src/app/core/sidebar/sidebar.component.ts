@@ -9,6 +9,7 @@ export class SidebarComponent implements OnInit {
   showFiller=false
   @ViewChild('drawer') drawer!:SidebarComponent
   @Input() isMenuClicked!: boolean
+  @Input() navItems:any
   showMenu=true
 
   constructor() { }

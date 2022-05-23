@@ -1,19 +1,22 @@
 .position{
   margin-bottom: 45px;margin-top: 200px;
+  width: 100%;
  
 }
 .header{
   position:fixed;
- // left: 230px;
+
   margin-bottom: 45px;
  
   top:0;
- 
- width: 88%;
+
   z-index: 7;
+ 
 }
 .main{
-  z-index: 7;position:relative;top:0
+  z-index: 7;position:absolute;top:0;
+  left: 230px;
+  
 }
 
 

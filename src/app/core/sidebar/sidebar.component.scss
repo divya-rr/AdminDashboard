@@ -1,16 +1,22 @@
 .example-container {
  height: 100%;
  width: 100%;
+ position:fixed;right: 0px;left: 0px;bottom: 0px;top: 0px;
 
- 
+   
 }
 
-mat-drawer-container { flex: 1 1 auto; }
+
+/* Hide scrollbar for IE, Edge add Firefox */
+
+
 
 .example-sidenav{
   background-color: rgba(60, 75, 100);
-
+  -ms-overflow-style: none;
+  scrollbar-width: none; 
   overflow-x:hidden;
+  overflow: hidden;
 }
 .center {
   display: block;
@@ -32,13 +38,17 @@ mat-drawer-container { flex: 1 1 auto; }
  align-items: center;
 
 }
+// .theme-item{
+//   text-align: center;
+// }
 .theme-item{
-  text-align: center;
+  padding-left: 23px;
 }
 .typo{
   padding-top: 18px;
 }
 .side-heading{
+  padding-top: 15px;
   padding-left: 10px;
 }
 mat-expansion-panel-header{
@@ -55,6 +65,29 @@ mat-expansion-panel-header:hover{
 .mat-expansion-indicator::after {
   color:white
 }
+.icon{
+  margin-right: 15px;
+}
+// .subTitle{
+//   background-color:rgba(59, 70, 89) !important ;
+.mat-expansion-panel{
+  color:white !important;
+  background-color: rgba(59, 70, 89) !important;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
 
 
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(59, 70, 89); 
+  border-radius: 10px;
+}
 
+/* Handle on hover */
+// ::-webkit-scrollbar-thumb:hover {
+//   background: #b30000; 
+// }
