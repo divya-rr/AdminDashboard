@@ -13,7 +13,8 @@ export class GuardGuard implements CanActivate {
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
       if(this.authService.isLoggedIn() ){
-        this.toastr.error("You are already logged in.You don't want to go to the login page")
+        this.router.navigateByUrl('/dashboard')
+        this.toastr.error("You are already logged in.!!!")
         
     return false;
       }

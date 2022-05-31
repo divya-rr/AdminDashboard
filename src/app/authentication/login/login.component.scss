@@ -1,3 +1,6 @@
+.container{
+    margin-top: 50px;
+}
 #password{
     margin-top: -34px;
    float: right;
@@ -5,5 +8,14 @@
 input.ng-invalid.ng-touched{
     border: 1px solid red;
 }
-.spinner-wrapper{position: fixed; z-index: 101; height: 100vh;width: 101vw;background: rgba(211,211,211,0.7);top: 0;left: 0;}
+.spinner-wrapper{
+    position: fixed;
+     z-index: 101; 
+     height: 100vh;
+     width: 101vw;
+     background: rgba(211,211,211,0.7);
+     top: 0;
+     left: 0;
+    }
+    
 .spinner-container{height: 100vh; width: 100vw;display: flex;flex-direction: column;justify-content: center;align-items: center; z-index: 3;}

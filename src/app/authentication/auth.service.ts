@@ -18,6 +18,7 @@ export class AuthService {
     localStorage.setItem('loggedInUser',this.info.email)
     return of({email,password})
   }
+  
     return throwError('You are not allowed to login.   Invalid credentials!!!!')
   
 
