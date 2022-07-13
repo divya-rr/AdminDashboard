@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SignupComponent } from './authentication/signup/signup.component';
 import { ToastrModule } from 'ngx-toastr';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -23,7 +24,7 @@ import { ToastrModule } from 'ngx-toastr';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,BrowserAnimationsModule,ToastrModule.forRoot(),
+    AppRoutingModule,BrowserAnimationsModule,ToastrModule.forRoot(),HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

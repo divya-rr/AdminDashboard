@@ -11,7 +11,7 @@ import { MediaComponent } from './media/media.component';
 import { HeaderComponent } from './header/header.component';
 import { SharedModule } from '../shared/shared.module';
 import { AuthenticationModule } from '../authentication/authentication.module';
-import { AuthGuard } from '../guards/auth.guard';
+
 
 
 

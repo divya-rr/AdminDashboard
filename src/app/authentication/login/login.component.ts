@@ -49,7 +49,10 @@ export class LoginComponent implements OnInit {
         response => {
           this.isLoading = true;
           setTimeout( () => {this.isLoading = false
+            this.toastr.success("Successfully logged in")
             this.router.navigate(['../dashboard'])}, 3000 );
+            console.log(response);
+            
         
 
          
@@ -57,10 +60,12 @@ export class LoginComponent implements OnInit {
         , errorMessage => {
           this.isLoading = true;
           setTimeout( () => {this.isLoading = false
-            this.toastr.error(this.error)}, 2000 );
+            this.toastr.error(errorMessage.statusText)}, 2000 );
         
 
-          this.error = errorMessage
+          this.error = JSON.stringify(errorMessage)
+          console.log(this.error);
+          
           //this.toastr.error(this.error)
 
         })

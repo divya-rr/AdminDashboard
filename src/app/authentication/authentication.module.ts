@@ -6,8 +6,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { SignupComponent } from './signup/signup.component';
 import { RouterModule, Routes } from '@angular/router';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
-import { AuthGuard } from '../guards/auth.guard';
+
 import { GuardGuard } from '../guards/guard.guard';
+import { HttpClientModule } from '@angular/common/http';
 
 
 const routes: Routes = [
@@ -25,7 +26,7 @@ const routes: Routes = [
     LoginComponent,SignupComponent
   ],
   imports: [
-    CommonModule,ReactiveFormsModule,RouterModule.forChild(routes),MatProgressSpinnerModule
+    CommonModule,ReactiveFormsModule,RouterModule.forChild(routes),MatProgressSpinnerModule,HttpClientModule
   ]
 })
 
